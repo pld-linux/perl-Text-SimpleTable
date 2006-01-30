@@ -8,13 +8,13 @@
 Summary:	Text::SimpleTable - Simple Eyecandy ASCII Tables
 Summary(pl):	Text::SimpleTable - proste, ³adne tabele ASCII
 Name:		perl-Text-SimpleTable
-Version:	0.02
+Version:	0.03
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	03604215eb4f2a279bf2f39d13f874f6
+# Source0-md5:	7eaf266174d4bf2b66f98db28c291b15
 URL:		http://search.cpan.org/dist/Text-SimpleTable/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
