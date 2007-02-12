@@ -6,7 +6,7 @@
 %define	pdir	Text
 %define	pnam	SimpleTable
 Summary:	Text::SimpleTable - Simple Eyecandy ASCII Tables
-Summary(pl):	Text::SimpleTable - proste, ³adne tabele ASCII
+Summary(pl.UTF-8):   Text::SimpleTable - proste, Å‚adne tabele ASCII
 Name:		perl-Text-SimpleTable
 Version:	0.03
 Release:	1
@@ -24,8 +24,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Simple eyecandy ASCII tables, as seen in Catalyst.
 
-%description -l pl
-Proste, ³adne tabele ASCII, takie jakie mo¿na zobaczyæ w Cataly¶cie.
+%description -l pl.UTF-8
+Proste, Å‚adne tabele ASCII, takie jakie moÅ¼na zobaczyÄ‡ w CatalyÅ›cie.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
