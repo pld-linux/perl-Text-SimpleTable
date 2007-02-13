@@ -6,7 +6,7 @@
 %define	pdir	Text
 %define	pnam	SimpleTable
 Summary:	Text::SimpleTable - Simple Eyecandy ASCII Tables
-Summary(pl.UTF-8):   Text::SimpleTable - proste, ładne tabele ASCII
+Summary(pl.UTF-8):	Text::SimpleTable - proste, ładne tabele ASCII
 Name:		perl-Text-SimpleTable
 Version:	0.03
 Release:	1
