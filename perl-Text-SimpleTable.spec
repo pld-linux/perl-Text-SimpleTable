@@ -8,13 +8,13 @@
 Summary:	Text::SimpleTable - Simple Eyecandy ASCII Tables
 Summary(pl.UTF-8):	Text::SimpleTable - proste, ładne tabele ASCII
 Name:		perl-Text-SimpleTable
-Version:	0.03
-Release:	2
+Version:	2.0
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Text/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	7eaf266174d4bf2b66f98db28c291b15
+# Source0-md5:	b57b6e60b5ee3cd5209d4bad510d0d2d
 URL:		http://search.cpan.org/dist/Text-SimpleTable/
 BuildRequires:	perl-Module-Build
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -32,17 +32,20 @@ Proste, ładne tabele ASCII, takie jakie można zobaczyć w Catalyście.
 %setup -q -n %{pdir}-%{pnam}-%{version}
 
 %build
-%{__perl} Build.PL \
-	destdir=$RPM_BUILD_ROOT \
-	installdirs=vendor
-./Build
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+%{__make}
 
-%{?with_tests:./Build test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-./Build install
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -52,3 +55,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes README
 %{perl_vendorlib}/Text/*.pm
 %{_mandir}/man3/*
+%{_examplesdir}/%{name}-%{version}
